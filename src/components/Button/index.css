@@ -1,4 +1,4 @@
-.Button {
+Button {
   height: 2.325rem;
   background: #767676;
   border-radius: 0.25rem;
@@ -8,8 +8,23 @@
   color: #FFF;
   transition: background-color 100ms ease-in-out;
   cursor: pointer;
+  margin: 3px;
 }
 
-.Button:hover {
+Button:hover {
   background: #767676C0;
+}
+
+Button.ascending::after {
+  content: '👇';
+  display: inline-block;
+  margin-left: 1em;
+
+}
+
+Button.descending::after {
+  content: '☝️';
+  display: inline-block;
+  margin-left: 1em;
+
 }
