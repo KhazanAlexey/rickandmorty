@@ -4,7 +4,7 @@ import axios from "axios";
 export const useFetchContent = () => {
     const [imgList, setImgList] = useState([]);
 
-
+///fetch first 10
     useEffect(() => {
         fetchMore(10)
     }, [])
