@@ -3,14 +3,13 @@ import axios from "axios";
 
 export const useFetchContent = () => {
     const [imgList, setImgList] = useState([]);
-    useEffect(async () => {
-        try {
-            const res = await axios.get('https://rickandmortyapi.com/api/character/[1,2,3,4,5,6,7,8,9,10]')
-            setImgList(res.data)
-        } catch (e) {
-            console.log('error ', e)
-        }
+
+
+    useEffect(() => {
+        fetchMore(10)
     }, [])
+
+
     ///fetch searching value from input
     const fetch = useCallback(async (value) => {
         if (value) {
